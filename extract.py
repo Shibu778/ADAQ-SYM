@@ -880,6 +880,7 @@ def load_settings(file):
         dicitonary with settings
     """
 
+    # This try seems to be unnecessary
     try:
         f = open(file,"r")
         data = json.load(f)
@@ -938,7 +939,7 @@ def load_settings(file):
     try:
         data['char_table_dir']
     except Exception as e:
-        data['char_table_dir'] = "/dedur01/data/wilst89/software/character_tables"
+        data['char_table_dir'] = "../character_tables"
     return data
 
 if __name__ == "__main__":
